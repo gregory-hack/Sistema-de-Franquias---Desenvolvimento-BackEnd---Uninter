@@ -42,7 +42,7 @@ Franquias.Api/
 
 1. Clone o repositório e entre na pasta do projeto:
    ```
-   git clone <link-do-repositorio>
+   git clone: https://github.com/gregory-hack/Sistema-de-Franquias---Desenvolvimento-BackEnd---Uninter
    cd Franquias/Franquias.Api
    ```
 
@@ -55,11 +55,15 @@ Franquias.Api/
    ```
    dotnet run
    ```
-   (ou `dotnet watch run` durante desenvolvimento, para recarregar automaticamente a cada alteração)
+    
+   ```
+   (ou `dotnet watch run` durante desenvolvimento, para recarregar automaticamente a cada alteração e abrir direto no swagger)
+   
+   ```
 
-4. As migrations do banco são aplicadas **automaticamente** na inicialização — não é necessário rodar `dotnet ef database update` manualmente. O arquivo `franquias.db` já é entregue neste repositório populado com dados de exemplo (várias unidades, produtos, vendas e chamados), para facilitar a o uso e testes.
+5. As migrations do banco são aplicadas **automaticamente** na inicialização. Não é necessário rodar `dotnet ef database update` manualmente. O arquivo `franquias.db` já é entregue neste repositório populado com dados de exemplo (várias unidades, produtos, vendas e chamados), para facilitar a o uso e testes.
 
-5. Acesse a documentação interativa (Swagger) em:
+6. Acesse a documentação interativa (Swagger) em:
    ```
    https://localhost:7064/swagger
    ```
@@ -70,7 +74,7 @@ Franquias.Api/
 
 ## Autenticação
 
-A API usa autenticação via JWT. Ao subir a aplicação pela primeira vez, o banco é populado automaticamente (seed) com três perfis de acesso: **Administrador**, **GestorUnidade** e **Operador**. Nenhum usuário é criado automaticamente — é necessário cadastrar um usuário via `POST /api/usuarios` antes de conseguir logar em `POST /api/auth/login`.
+A API usa autenticação via JWT. Ao subir a aplicação pela primeira vez, o banco é populado automaticamente (seed) com três perfis de acesso: **Administrador**, **GestorUnidade** e **Operador**. Nenhum usuário é criado automaticamente, é necessário cadastrar um usuário via `POST /api/usuarios` antes de conseguir logar em `POST /api/auth/login`.
 
 Após o login, copie o token JWT retornado e cole no botão **Authorize** (ícone de cadeado) no topo do Swagger, para acessar os endpoints protegidos.
 
