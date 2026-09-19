@@ -11,14 +11,14 @@ namespace Franquias.Api.Services
         private readonly VendaRepository _repositorio;
         private readonly UnidadeFranqueadaRepository _unidadeRepositorio;
         private readonly ProdutoServicoRepository _produtoRepositorio;
-        private readonly EstoqueService _estoqueService;
+        private readonly IEstoqueService _estoqueService;
 
         public VendaService(
             DBFranquias contexto,
             VendaRepository repositorio,
             UnidadeFranqueadaRepository unidadeRepositorio,
             ProdutoServicoRepository produtoRepositorio,
-            EstoqueService estoqueService)
+            IEstoqueService estoqueService)
         {
             _contexto = contexto;
             _repositorio = repositorio;
